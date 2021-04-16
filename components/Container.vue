@@ -6,17 +6,17 @@
 
 <script>
 export default {
-  name: 'Container',
+  name: "Container",
   props: {
     full: {
       type: Boolean,
-      default: false,
-    },
-  },
-}
+      default: false
+    }
+  }
+};
 </script>
 
-<style>
+<style scoped>
 .container {
 }
 </style>

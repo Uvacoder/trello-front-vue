@@ -9,12 +9,12 @@ export default {
   computed: {
     userName() {
       return "ll".toUpperCase();
-    },
-  },
+    }
+  }
 };
 </script>
 
-<style>
+<style scoped>
 .user-account {
   outline: none;
   padding: 2px;

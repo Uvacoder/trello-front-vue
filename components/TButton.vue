@@ -3,8 +3,7 @@
     :class="hasClass"
     :style="{
       margin: m,
-      textTransform: textTransform,
-      ...customStyle,
+      textTransform: textTransform
     }"
     @click="$emit('click')"
   >
@@ -17,7 +16,7 @@
     <span
       v-if="title"
       :class="{ title }"
-      :style="{ color: titleColor, titleStyle, fontSize: titleSize }"
+      :style="{ color: titleColor, fontSize: titleSize }"
       >{{ title }}</span
     >
   </button>
@@ -29,52 +28,46 @@ export default {
   props: {
     bg: {
       type: String,
-      default: "#ffffff63",
+      default: "#ffffff63"
     },
     iconName: {
       type: String,
-      default: "",
+      default: ""
     },
     iconSize: {
       type: String,
-      default: "24px",
+      default: "24px"
     },
     iconColor: {
       type: String,
-      default: "#000",
+      default: "#000"
     },
     classCustom: {
       type: String,
-      default: "t-button",
+      default: "t-button"
     },
-    customStyle: {
-      type: Object,
-      default: {},
-    },
+
     title: {
       type: String,
-      default: "",
+      default: ""
     },
     titleColor: {
       type: String,
-      default: "000",
+      default: "000"
     },
-    titleStyle: {
-      type: Object,
-      default: "",
-    },
+
     titleSize: {
       type: String,
-      default: "15px",
+      default: "15px"
     },
     m: {
       type: String,
-      default: "",
+      default: ""
     },
     textTransform: {
       type: String,
-      default: "initial",
-    },
+      default: "initial"
+    }
   },
   computed: {
     hasIcon() {
@@ -84,12 +77,12 @@ export default {
       return this.classCustom === "t-button"
         ? "t-button"
         : `${this.classCustom}`;
-    },
-  },
+    }
+  }
 };
 </script>
 
-<style>
+<style scoped>
 .t-button {
   outline: none;
   padding: 2px;

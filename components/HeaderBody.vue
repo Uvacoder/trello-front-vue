@@ -1,19 +1,16 @@
 <template>
   <div class="header-body-container">
     <div class="row">
-      <t-button
-        icon-name="menuDots"
-        icon-size="20px"
-        icon-color="#fff"
-        m=" 0 5px 0 0"
-      />
+      <button-dots-header />
+
       <t-button
         icon-name="home"
         icon-size="20px"
         icon-color="#fff"
         m=" 0 5px 0 0"
       />
-      <t-button
+
+      <t-menu
         icon-name="trello"
         icon-size="20px"
         icon-color="#fff"
@@ -22,7 +19,10 @@
         titleColor="#fff"
         text-transform="capitalize"
         class="hide-mobile"
-      />
+        titleMenu="Mais da Atlassian"
+      >
+        <div>asdasd</div>
+      </t-menu>
     </div>
 
     <div class="row jc-center">
@@ -55,12 +55,14 @@
 </template>
 
 <script>
+import ButtonDotsHeader from "./ButtonDotsHeader.vue";
 export default {
-  name: "HeaderBoby",
+  components: { ButtonDotsHeader },
+  name: "HeaderBoby"
 };
 </script>
 
-<style>
+<style scoped>
 .header-body-container {
   width: 100%;
   min-height: 40px;
